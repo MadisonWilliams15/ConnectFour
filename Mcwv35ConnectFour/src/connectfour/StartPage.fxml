@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="connectfour.StartPageController">
+   <children>
+      <ImageView fitHeight="600" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@BlueBackground.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="105.0" layoutY="126.0" prefHeight="97.0" prefWidth="403.0" text="Welcome to Connect 4!">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <MenuBar fx:id="Menu" prefHeight="29.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Rules">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#OnePlayerPressed" text="One Player Rules" />
+                  <MenuItem mnemonicParsing="false" onAction="#TwoPlayerPressed" text="Two Player Rules" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#AboutPressed" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="OnePlayerButton" layoutX="105.0" layoutY="276.0" mnemonicParsing="false" onAction="#OnePlayer" prefHeight="72.0" prefWidth="146.0" text="One Player" />
+      <Button fx:id="TwoPlayersButton" layoutX="362.0" layoutY="276.0" mnemonicParsing="false" onAction="#TwoPlayers" prefHeight="72.0" prefWidth="146.0" text="Two Players" />
+   </children>
+</AnchorPane>

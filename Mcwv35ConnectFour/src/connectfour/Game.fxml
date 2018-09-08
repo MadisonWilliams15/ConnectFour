@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="vizPane" onMouseClicked="#AnchorPressed" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="connectfour.GameController">
+   <children>
+      <StackPane fx:id="stackPane" layoutX="43.0" layoutY="104.0" prefHeight="392.0" prefWidth="522.0">
+         <children>
+            <ImageView fx:id="board" fitHeight="418.0" fitWidth="522.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Connect4Board.png" />
+               </image>
+            </ImageView>
+         </children></StackPane>
+      <MenuBar prefHeight="29.0" prefWidth="608.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Options">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#newGamePressed" text="New Game" />
+                  <MenuItem mnemonicParsing="false" onAction="#MenuPressed" text="Menu" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Rules">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#OnePlayerPressed" text="One Player Rules" />
+                  <MenuItem mnemonicParsing="false" onAction="#TwoPlayersPressed" text="Two Player Rules" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#AboutPressed" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Game">
+               <items>
+                  <MenuItem fx:id="resumeGame" mnemonicParsing="false" onAction="#ResumeGamePressed" text="ResumeGame" />
+                  <MenuItem fx:id="saveGame" mnemonicParsing="false" onAction="#SaveGamePressed" text="Save Game" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="label" layoutX="139.0" layoutY="48.0" prefHeight="43.0" prefWidth="330.0" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
